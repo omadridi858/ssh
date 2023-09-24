@@ -1,4 +1,4 @@
 import cv2 
 import numpy as np
-b=np.zeros(255,255)
+b=np.zeros((2, 1))
 print(b)
