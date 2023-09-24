@@ -1,3 +1,4 @@
 import cv2 
-
-print("gg")
+import numpy as np
+b=np.zeros(255,255)
+print(b)
