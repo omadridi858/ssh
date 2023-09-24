@@ -1,8 +1,9 @@
-import cv2 
+import cv2
 import numpy as np
-b=np.zeros((5,5))
-cv2.imshow('gfg', b)
-  
-# waiting using waitKey method
-cv2.waitKey(0)
+import matplotlib.pyplot as plt
+
+b = np.zeros((5, 5))
+plt.imshow(b, cmap='gray')
+plt.savefig('output_image.png')
+plt.close()
 print(b)
