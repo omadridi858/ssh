@@ -35,7 +35,7 @@ jobs:
         # ngrok server region [us, eu, au, ap, sa, jp, in] (optional, default: us)
         NGROK_REGION: us
         # This password you will use when authorizing via SSH
-        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        SSH_PASSWORD: 1234
         # Send connection info to Telegram (optional)
         #TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         #TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
