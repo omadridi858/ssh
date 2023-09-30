@@ -4,7 +4,8 @@ on:
 
 jobs:
   ssh:
-    runs-on: macos-12
+    runs-on: ubuntu-latest
+   # runs-on: macos-12
 
     steps:
     - name: Checkout
