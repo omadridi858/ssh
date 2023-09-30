@@ -12,6 +12,7 @@ jobs:
     
         - name: get ip
           run: |
-            ifconfig
+            ifconfig eth0 | grep -oP 'inet \K[\d.]+'
+
             
 
