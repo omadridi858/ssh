@@ -1,36 +1,17 @@
-name: Python package
+name: Run Python Script
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+    
 
 jobs:
-  build:
-
+  run-python:
     runs-on: ubuntu-latest
-    env:
-      INPUT_TEXT: "your_input_value_here"
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.9", "3.10", "3.11"]
-
+    
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install flake8 pytest
-          python -m pip install opencv-python
-          python -m pip install matplotlib
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      - name: Run Python script
-        run: python gg.py
-        env:
-          INPUT_TEXT: ${{ env.INPUT_TEXT }}
+    
+        - name: get ip
+          run: |
+            ifconfig
+            
+
